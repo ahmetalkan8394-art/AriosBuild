@@ -1,0 +1,9 @@
+Package: com.emre.arioshome
+Name: AriosHome
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: AriosHome PUBG Tweak
+Maintainer: Emre
+Author: Emre
+Section: Tweaks
