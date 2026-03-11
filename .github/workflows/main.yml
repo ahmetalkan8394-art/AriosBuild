@@ -6,8 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Theos
-      # Burası en kritik yer, resmi ve güncel olanı kullanıyoruz
-        uses: theos/setup-theos-action@v1.1
+        # Hata veren yer burasıydı, bu güncel olanıdır:
+        uses: ms7m/setup-theos-action@main
       - name: Build Tweak
         run: |
           make package FINALPACKAGE=1
