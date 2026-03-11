@@ -1,0 +1,17 @@
+name: AriosBuild
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Theos
+        uses: a-p-t/setup-theos-action@v1
+      - name: Build Tweak
+        run: |
+          make package FINALPACKAGE=1
+      - name: Upload Dylib
+        uses: actions/upload-artifact@v3
+        with:
+          name: AriosHome-Dylib
+          path: .theos/obj/install/*.dylib
