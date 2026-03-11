@@ -6,7 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Theos
-        uses: theos/setup-theos-action@v1
+      # Burası en kritik yer, resmi ve güncel olanı kullanıyoruz
+        uses: theos/setup-theos-action@v1.1
       - name: Build Tweak
         run: |
           make package FINALPACKAGE=1
